@@ -5,12 +5,10 @@ import PostCard from "componentes/PostCard";
 
 export default function Home_initial() {
     return (
-        <ul className={styles.posts}>
-            {posts.map((post) => (
-                <li key={post.id}>
-                    <PostCard post={post} />
-                </li>
-            ))}
-        </ul>
+        <div>
+            <h6>
+                Tela Inicial - Crys e Raiane 
+            </h6>
+        </div>
     )
 }

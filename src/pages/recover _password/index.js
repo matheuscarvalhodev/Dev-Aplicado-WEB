@@ -5,12 +5,8 @@ import PostCard from "componentes/PostCard";
 
 export default function Recover_password() {
     return (
-        <ul className={styles.posts}>
-            {posts.map((post) => (
-                <li key={post.id}>
-                    <PostCard post={post} />
-                </li>
-            ))}
-        </ul>
+        <h2>
+            Tela de recuperação de senha - Izabela
+        </h2>
     )
 }

@@ -5,7 +5,7 @@ import { Route, Routes, useParams } from "react-router-dom"
 import posts from "json/posts.json";
 import PostModelo from "componentes/PostModelo";
 import ReactMarkdown from "react-markdown";
-import NaoEncontrada from 'pages/NaoEncontrada';
+import NaoEncontrada from 'pages/unused_pages/NaoEncontrada';
 import PaginaPadrao from 'componentes/PaginaPadrao';
 import PostCard from 'componentes/PostCard';
 

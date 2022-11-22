@@ -5,12 +5,8 @@ import PostCard from "componentes/PostCard";
 
 export default function Report() {
     return (
-        <ul className={styles.posts}>
-            {posts.map((post) => (
-                <li key={post.id}>
-                    <PostCard post={post} />
-                </li>
-            ))}
-        </ul>
+        <h3>
+            Relatorio de janela - Marcos
+        </h3>
     )
 }

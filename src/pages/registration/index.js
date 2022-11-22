@@ -5,12 +5,8 @@ import PostCard from "componentes/PostCard";
 
 export default function Registration() {
     return (
-        <ul className={styles.posts}>
-            {posts.map((post) => (
-                <li key={post.id}>
-                    <PostCard post={post} />
-                </li>
-            ))}
-        </ul>
+        <div>
+            <h3>Tela de registro de Usuario - Luciana</h3>
+        </div>
     )
 }
