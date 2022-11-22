@@ -4,7 +4,7 @@ import PostModelo from "componentes/PostModelo";
 import fotoCapa from "assets/sobre_mim_capa.png";
 import fotoSobreMim from "assets/sobre_mim_foto.png";
 
-export default function SobreMim() {
+export default function News_register() {
     return (
         <PostModelo
             fotoCapa={fotoCapa}
