@@ -102,7 +102,7 @@ export default function SideNavBar() {
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <AppBar position="fixed" open={open}>
-        <Toolbar>
+        <Toolbar style={{ backgroundColor: '#FF6B00' }}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -122,6 +122,10 @@ export default function SideNavBar() {
       </AppBar>
       <Drawer variant="permanent" open={open}>
         <DrawerHeader>
+          <div className="text-center">
+            <img src='logo.svg' className="rounded" ></img>
+          </div>
+          {/* <img className='' src='logo.svg'></img> */}
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
           </IconButton>
@@ -177,7 +181,7 @@ export default function SideNavBar() {
           ))}
         </List> */}
       </Drawer>
- 
+
     </Box>
   );
 }
