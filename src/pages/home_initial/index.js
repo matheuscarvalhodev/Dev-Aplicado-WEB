@@ -1,14 +1,17 @@
-import styles from './Inicio.module.css';
-
-import posts from 'json/posts.json';
+import styles from "./Inicio.module.css";
+import SideNavBar from "componentes/SiderBar";
+import posts from "json/posts.json";
 import PostCard from "componentes/PostCard";
+import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
+
 
 export default function Home_initial() {
-    return (
-        <div>
-            <h6>
-                Tela Inicial - Crys e Raiane 
-            </h6>
-        </div>
-    )
+  return (
+    <>
+      <SideNavBar />
+      <Container maxWidth="sm">
+    </Container>
+    </>
+  );
 }
