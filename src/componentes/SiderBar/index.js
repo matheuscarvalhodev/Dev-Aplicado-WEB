@@ -1,6 +1,7 @@
 import * as React from "react";
 import { styled, useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
 import MuiDrawer from "@mui/material/Drawer";
 import MuiAppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
@@ -22,6 +23,7 @@ import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 import SignalCellularAltIcon from '@mui/icons-material/SignalCellularAlt';
 import NewspaperIcon from '@mui/icons-material/Newspaper';
 import AssignmentIcon from '@mui/icons-material/Assignment';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 const drawerWidth = 240;
 
@@ -106,6 +108,10 @@ export default function SideNavBar() {
     <NewspaperIcon/>,
     <AssignmentIcon/>
   ]
+  const routes = [
+    "../../pages/login"
+  ]
+
   const handleDrawerClose = () => {
     setOpen(false);
   };
@@ -127,9 +133,10 @@ export default function SideNavBar() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div">
+          <Typography variant="h6" noWrap component="div"  sx={{ flexGrow: 1 }}>
             Defesa Civil
           </Typography>
+          <Button  href="../../pages/login" color="inherit"><AccountCircleIcon sx={{marginRight: 2}}/>Login</Button>
         </Toolbar>
       </AppBar>
       <Drawer variant="permanent" open={open}>
@@ -162,6 +169,7 @@ export default function SideNavBar() {
                   justifyContent: open ? "initial" : "center",
                   px: 2.5,
                 }}
+                href={`${routes[index]}`}
               >
                 <ListItemIcon
                   sx={{
