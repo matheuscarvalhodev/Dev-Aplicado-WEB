@@ -1,0 +1,60 @@
+.coluna1 {
+    width: 100%;
+   /* background: #3333; */
+}
+
+.coluna2 {
+    
+    width: 100%;
+}
+
+.tituloCadastroNoticia {
+    padding: 10px;
+    font-size: 25px;
+    color: #2F7FF9;
+}
+
+.tituloNoticia {
+    font-size: 20px;
+    width: 100%;
+    text-align: right;
+}
+
+.corpo{
+    padding-bottom: 50px;
+}
+
+.arquivoCampo{
+    text-align: left;
+    background: #F8F9FA;
+    
+}
+
+.botaoSubmit{
+    padding-top: 10px;
+    text-align: right;
+}
+
+@media screen and (max-width: 575px) {
+    .tituloCadastroNoticia {
+        padding: 5px;
+        font-size: 20px;
+        color: #2F7FF9;
+    }
+    .corpo{
+        padding-bottom: 10px;
+    }
+    .tituloNoticia {
+        font-size: 15px;
+        width: 100%;
+        text-align:center;
+    }
+    .botaoSubmit{
+        padding-top: 10px;
+        text-align: center;
+    }
+    .arquivoCampo{
+        text-align: center;
+        background: #F8F9FA;
+    }
+}
