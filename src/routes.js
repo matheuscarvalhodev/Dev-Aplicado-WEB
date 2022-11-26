@@ -13,6 +13,7 @@ import Login from "pages/login";
 import News_register from "pages/news_register";
 import Ocurrences_page from "pages/occurrences_page";
 import Recover_password from "pages/recover _password";
+
 import Report from "pages/report";
 import Request_services from "pages/request_services";
 
@@ -21,7 +22,7 @@ function AppRoutes() {
     <BrowserRouter>
       {/* <ScrollToTop /> */}
       {/* <Menu /> */}
-      <Home_initial/>
+      <Recover_password/>
 
       {/* <Routes>
         <Route path="/" element={<PaginaPadrao />}>
