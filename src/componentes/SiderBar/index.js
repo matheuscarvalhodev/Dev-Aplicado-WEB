@@ -110,7 +110,9 @@ export default function SideNavBar() {
     <AssignmentIcon/>
   ]
   const routes = [
-    "../../pages/login"
+    "../../home_initial",
+    "../../pages/login",
+    "../../pages/report"
   ]
 
   const handleDrawerClose = () => {

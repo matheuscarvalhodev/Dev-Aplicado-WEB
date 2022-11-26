@@ -3,7 +3,7 @@ import { Table } from 'reactstrap';
 
 export function TableRelatorio(props) {
 	return (
-		<Table striped>
+		<Table striped responsive>
 
 			<thead>
 				<tr>
