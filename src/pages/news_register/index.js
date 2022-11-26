@@ -1,13 +1,7 @@
-import styles from "./SobreMim.module.css";
+import Forms from "./forms";
 
-import PostModelo from "componentes/PostModelo";
-import fotoCapa from "assets/sobre_mim_capa.png";
-import fotoSobreMim from "assets/sobre_mim_foto.png";
-
-export default function News_register() {
+export default function Register (){
     return (
-        <h2>
-            <h3> Cadastro de noticias - Lucas</h3>
-        </h2>
+        <Forms/>
     )
 }
