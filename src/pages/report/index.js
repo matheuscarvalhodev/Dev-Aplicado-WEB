@@ -49,7 +49,7 @@ const tableOrigin = {
             2,
             "Urbana",
         ],
-        oc5: ["Alagamento", "Bairro Santa Luzia", "FEVEREIRO", 5, 0, 5, "Urbano"],
+        oc5: ["Alagamento", "Bairro Santa Luzia", "FEVEREIRO", 5, 0, 5, "Urbana"],
         oc6: ["Outros", "Bairro Cidade Nova", "JANEIRO", 20, 2, 22, "Rural"],
     },
 };
@@ -57,7 +57,7 @@ const tableOrigin = {
 export default function Report() {
 
     const date = new Date();
-    const ZonaSelect = ["URBANO", "RURAL"];
+    const ZonaSelect = ["Urbana", "Rural"];
 
     const [table, setTable] = useState(tableOrigin);
     const [select, setSelect] = useState();
@@ -138,7 +138,6 @@ export default function Report() {
                                     table={select}
                                     setFilters={setFilters}
                                 />
-
                                 <Selection
                                     class={styles.sect}
                                     label="Zona: "
