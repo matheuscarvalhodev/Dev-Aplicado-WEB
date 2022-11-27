@@ -15,13 +15,14 @@ import Ocurrences_page from "pages/occurrences_page";
 import Recover_password from "pages/recover _password";
 import Report from "pages/report";
 import Request_services from "pages/request_services";
+import Register from "pages/news_register";
 
 function AppRoutes() {
   return (
     <BrowserRouter>
       {/* <ScrollToTop /> */}
       {/* <Menu /> */}
-      <Home_initial/>
+      <Register/>
 
       {/* <Routes>
         <Route path="/" element={<PaginaPadrao />}>

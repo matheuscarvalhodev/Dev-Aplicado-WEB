@@ -1,0 +1,100 @@
+.posts {
+    padding: 0 6vw 3.625rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: -2.5rem;
+}
+
+@media (max-width: 1100px) {
+    .posts {
+        margin-top: 0;
+        padding: 2rem 1.5rem 3.625rem;
+    }
+}
+
+@media (max-width: 744px) {
+    .posts {
+        padding: 2rem 1rem 3rem;
+    }
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    margin: 0 0 0 0 !important;
+    padding: 0 !important;
+    flex: 1;
+    text-align: center;
+    width: 100%;
+    height: 150%;
+    border: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.cardPrincipal1 {
+    width: 100%;
+    height: 96vh;
+    background-color: #f87527;
+    padding: 0 !important;
+    margin: 0 !important;
+    align-items: center !important;
+    border: #f87527;
+    
+}
+
+.cardPrincipal2 {
+    width: 100%;
+    height: 96vh;
+    padding: 0 !important;
+    text-align: center;
+    margin: 0 !important;
+    border: none !important;
+}
+
+.cardCadastro {
+    padding: 4cm;
+    align-items: center !important;
+    border: 0 !important;
+
+}
+
+.card3 {
+    border: #ff6b00;
+}
+
+.btnColor {
+    background-color: #ff6b00;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 150px;
+    text-align: center;
+    margin: 0;
+    position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.imagem {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5cm;
+    width: 50%;
+}
