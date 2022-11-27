@@ -21,7 +21,7 @@ function AppRoutes() {
     <BrowserRouter>
       {/* <ScrollToTop /> */}
       {/* <Menu /> */}
-      <Report/>
+      <Home_initial/>
 
       {/* <Routes>
         <Route path="/" element={<PaginaPadrao />}>
