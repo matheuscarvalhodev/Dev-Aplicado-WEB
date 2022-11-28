@@ -22,43 +22,56 @@ function CadastroNoticia() {
         setFormValues({ ...formValues, [name]: value });
     };
 
-    
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (image == null)
-            return;
-        const storageRef = ref(storage, `images/${image.name}`)
-        const uploadTask = uploadBytesResumable(storageRef, image)
-        // console.log("URL imagem: ",setImage)
-        uploadTask.on(
-            "state_changed",
-            snapshot => {
-                const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100
-                setProgress(progress);
-            },
-            error => {
-                alert(error)
-            },
-            () => {
-                getDownloadURL(uploadTask.snapshot.ref).then(url => {
-                    setImage(url)
-                    const formData = new FormData(e.target);
-                    const data = Object.fromEntries(formData);
-                    console.log("HandleSubmit ", data);
-            
-                    const titulo = data.tituloNoticia;
-                    const corpo = data.corpoDaNoticia;
-                    const urlImagem = url;
-                    const dataPublicacao = new Date();
-                    
-                    axios.post("http://localhost:5000/noticias", { titulo, corpo, urlImagem, dataPublicacao})
+        if (image ===null || image === '') {
+            // const formData = new FormData(e.target);
+            // const data = Object.fromEntries(formData);
+            // console.log("HandleSubmit ", data);
+            // const titulo = data.tituloNoticia;
+            // const corpo = data.corpoDaNoticia;
+            // const dataPublicacao = new Date();
 
-                    alert("Notícia enviada!");
-                    window.location.reload();
-                })
-            }
-        ) 
-      
+            // axios.post("http://localhost:5000/noticias", { titulo, corpo, dataPublicacao })
+
+            alert("Você precisa adicionar um arquivo de imagem!");
+            // window.location.reload();
+            return;
+        }
+        else {
+            const storageRef = ref(storage, `images/${image.name}`)
+            const uploadTask = uploadBytesResumable(storageRef, image)
+
+            uploadTask.on(
+                "state_changed",
+                snapshot => {
+                    const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+                    setProgress(progress);
+                },
+                error => {
+                    alert(error)
+                },
+                () => {
+                    getDownloadURL(uploadTask.snapshot.ref).then(url => {
+                        setImage(url)
+                        const formData = new FormData(e.target);
+                        const data = Object.fromEntries(formData);
+                        console.log("HandleSubmit ", data);
+
+                        const titulo = data.tituloNoticia;
+                        const corpo = data.corpoDaNoticia;
+                        const urlImagem = url;
+                        const dataPublicacao = new Date();
+
+                        axios.post("http://localhost:5000/noticias", { titulo, corpo, urlImagem, dataPublicacao })
+
+                        alert("Notícia enviada!");
+                        window.location.reload();
+                    })
+                }
+            )
+        }
     };
 
     console.log(image)
@@ -104,9 +117,10 @@ function CadastroNoticia() {
                         <div className="col-sm-9 linha1">
                             <div className={styles.coluna2}>
                                 <div className={styles.arquivoCampo}>
-                                    <input type="file" accept="image/*" onChange={(e) => { 
+                                    <input type="file" accept="image/*" onChange={(e) => {
                                         e.preventDefault()
-                                        setImage(e.target.files[0]) }} />
+                                        setImage(e.target.files[0])
+                                    }} />
                                 </div>
                             </div>
                             <div className={styles.botaoSubmit}>
@@ -119,7 +133,7 @@ function CadastroNoticia() {
             {/* {!image && <progress value={progress} max="100px" />}
             {image && <img src={image} alt="Imagem" />} */}
         </div>
-    
+
     )
 }
 
