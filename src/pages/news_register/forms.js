@@ -40,59 +40,57 @@ export default function Registration() {
 
             </Col>
 
-            <Col >
-                <Card className={styles.cardCadastro}>
-                    <h1 className="d-flex justify-content-center p-3 m-0 text-secondary font-weight-bold">CADASTRO</h1>
+            <Col className={styles.cardCadastro}>
+                <h1 className="d-flex justify-content-center p-3 m-0 text-secondary font-weight-bold">CADASTRO</h1>
 
-                    <form onSubmit={onSubmit} className='position-center border-0'>
-                        <div className="row">
-                            <div className="col">
-                                <Input type="text" id='nome' className="form-control" placeholder="Nome" required />
-                            </div>
-                            <div className="col">
-                                <Input type="text" id='sobrenome' className="form-control" placeholder="Sobrenome" required />
-                            </div>
+                <form onSubmit={onSubmit} className='position-center border-0'>
+                    <div className="row">
+                        <div className="col">
+                            <Input type="text" id='nome' className="form-control" placeholder="Nome" required />
                         </div>
+                        <div className="col">
+                            <Input type="text" id='sobrenome' className="form-control" placeholder="Sobrenome" required />
+                        </div>
+                    </div>
 
-                        <div>
-                            <Input type="text" id='endereco' className="form-control mt-3" placeholder="Endereço" required />
+                    <div>
+                        <Input type="text" id='endereco' className="form-control mt-3" placeholder="Endereço" required />
+                    </div>
+                    <div className="row">
+                        <div className="col ">
+                            <Input type="tel" id='telefone' className="form-control mt-3" placeholder="Telefone" required />
                         </div>
-                        <div className="row">
-                            <div className="col ">
-                                <Input type="tel" id='telefone' className="form-control mt-3" placeholder="Telefone" required />
-                            </div>
-                            <div className="col">
-                                <Input type="number" id='cpf' className="form-control mt-3" placeholder="CPF" required />
-                            </div>
+                        <div className="col">
+                            <Input type="number" id='cpf' className="form-control mt-3" placeholder="CPF" required />
                         </div>
-                        <div >
-                            <Input type="email" className="form-control mt-3" id="email" aria-describedby="emailHelp" placeholder="Email" required />
-                        </div>
+                    </div>
+                    <div >
+                        <Input type="email" className="form-control mt-3" id="email" aria-describedby="emailHelp" placeholder="Email" required />
+                    </div>
 
-                        <div className="row">
-                            <div class="col">
-                                <Input type="password" id='senha' className="form-control mt-3 " placeholder="Senha" required />
-                            </div>
-                            <div className="col">
-                                <Input type="password" id='novaSenha' className="form-control mt-3" placeholder="Senha Novamente" required />
-                            </div>
+                    <div className="row">
+                        <div class="col">
+                            <Input type="password" id='senha' className="form-control mt-3 " placeholder="Senha" required />
                         </div>
-                        <div className='d-flex flex-column align-items-center m-4'>
-                            <button
-                                type="submit"
-                                className={styles.btnColor}
+                        <div className="col">
+                            <Input type="password" id='novaSenha' className="form-control mt-3" placeholder="Senha Novamente" required />
+                        </div>
+                    </div>
+                    <div className='d-flex flex-column align-items-center m-4'>
+                        <button
+                            type="submit"
+                            className={styles.btnColor}
 
-                            >
-                                Sign Up
-                            </button>
-                        </div>
-                        <div>
-                            <p className="dont-accont text-center">
-                                Already registered <a href="/sign-in">sign in?</a>
-                            </p>
-                        </div>
-                    </form>
-                </Card>
+                        >
+                            Sign Up
+                        </button>
+                    </div>
+                    <div>
+                        <p className="dont-accont text-center">
+                            Already registered <a href="/sign-in">sign in?</a>
+                        </p>
+                    </div>
+                </form>
             </Col>
         </Row>
     )
