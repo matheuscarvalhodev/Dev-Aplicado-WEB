@@ -77,18 +77,8 @@ form {
     width: 1450px;
     height: 170px;
     font-size: 70px;
+    margin: 1cm;
 }  
-    .inputa {
-        background: #fff;
-        cursor: pointer;
-        font-size: 50px;
-        color:#000000;
-        border-radius: 40px;
-        width: 1450px;
-        height: 170px;
-        font-size: 70px;     
-}
-
 
 .input input,
 .loginbtn {
@@ -121,7 +111,7 @@ form {
     font-size: 50px;
     color:#ffffff;
     width: auto;
-   
+    margin: 1cm;
 }
 
 .loginbtn:focus,

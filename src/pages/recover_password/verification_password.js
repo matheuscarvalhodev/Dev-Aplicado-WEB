@@ -4,8 +4,9 @@ import posts from 'json/posts.json';
 import PostCard from "componentes/PostCard";
 import React from "react";
 import reactMarkdown from 'react-markdown';
+import * as yup from 'yup';
 
-function Recover_password() {
+function Verification_password () {
   return (
 
     <div class={styles.maincontainer} >
@@ -27,4 +28,4 @@ function Recover_password() {
     </div>
   );
 }
- export default Recover_password;
+ export default Verification_password;
