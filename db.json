@@ -1,0 +1,11 @@
+{
+  "noticias": [
+    {
+      "titulo": "Primeira Notícia",
+      "corpo": "teste da primeira notícia com json server e firebase",
+      "urlImagem": "https://firebasestorage.googleapis.com/v0/b/reactuploads-382c9.appspot.com/o/images%2F6166e05ca0fde6afb8cedad4ed63074b.jpg?alt=media&token=559f3a42-a5eb-4594-8541-70a3bab8f624",
+      "dataPublicacao": "2022-11-28T21:20:00.881Z",
+      "id": 1
+    }
+  ]
+}

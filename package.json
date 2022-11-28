@@ -24,7 +24,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "server": "json-server --watch db.json --port 5000"
   },
   "eslintConfig": {
     "extends": [
@@ -45,7 +46,9 @@
     ]
   },
   "devDependencies": {
+    "axios": "^1.2.0",
     "bootstrap": "^5.2.3",
+    "firebase": "^9.14.0",
     "json-server": "^0.17.1"
   }
 }
