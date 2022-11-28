@@ -40,10 +40,11 @@ export default function Registration() {
 
             </Col>
 
-            <Col className={styles.cardCadastro}>
-                <h1 className="d-flex justify-content-center p-3 m-0 text-secondary font-weight-bold">CADASTRO</h1>
-
-                <form onSubmit={onSubmit} className='position-center border-0'>
+            <Col>
+                <form onSubmit={onSubmit} className={styles.form}>
+                    <div>
+                    <h1 className="d-flex justify-content-center p-3 m-0 text-secondary font-weight-bold">CADASTRO</h1>
+                    </div>
                     <div className="row">
                         <div className="col">
                             <Input type="text" id='nome' className="form-control" placeholder="Nome" required />

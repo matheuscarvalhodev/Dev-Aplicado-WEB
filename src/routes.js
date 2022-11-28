@@ -23,8 +23,7 @@ function AppRoutes() {
     <BrowserRouter>
       {/* <ScrollToTop /> */}
       {/* <Menu /> */}
-      {/* <Register/> */}
-      <CadastroNoticia/>
+       <Register/> 
 
       {/* <Routes>
         <Route path="/" element={<PaginaPadrao />}>
