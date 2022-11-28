@@ -1,0 +1,146 @@
+:root {
+    --green-color: #62d523;
+    --blue-color: rgb(57, 35, 252);
+    --light-gray: rgb(203, 43, 43);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: varrgb(215, 23, 23);
+    font-family: "Source Sans Pro", sans-serif;
+}
+.maincontainer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #ffff;
+    width: 100%;
+    height: 100vh;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+
+}
+.container {
+    width: 40%;
+    height: 60%;
+    box-shadow: 0 12px 12px rgb(183, 176, 176, 183);
+    z-index: 10;
+    overflow: hidden;
+    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+
+}
+
+.loginformtitle {
+    font-family: Nunito, sans-serif;
+    display: relative;
+    font-size: 110px;
+    color: rgba(113, 112, 110, 0.973);
+    line-height: 5;
+    text-align: center;
+
+}
+.loginformthead {
+    font-family: Nunito, sans-serif;
+    display: block;
+    font-size: 70px;
+    color: rgba(113, 112, 110, 0.973);
+    line-height: 1,5;
+    text-align: center;
+    margin: 0 200px;
+}
+form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: hsl(0, 0%, 97%);
+    justify-content:flex;
+    
+}
+
+.input {
+    background: #fff;
+    cursor: pointer;
+    font-size: 50px;
+    color:#000000;
+    border-radius: 40px;
+    width: 1450px;
+    height: 170px;
+    font-size: 70px;
+}  
+    .inputa {
+        background: #fff;
+        cursor: pointer;
+        font-size: 50px;
+        color:#000000;
+        border-radius: 40px;
+        width: 1450px;
+        height: 170px;
+        font-size: 70px;     
+}
+
+
+.input input,
+.loginbtn {
+    width: 700px;
+    height: 170px; 
+    padding: 0 41rem;
+    border-radius: 40px;
+    transition: 0.2s;
+    font-weight: bold;
+    z-index: 3;
+    font-size: 40px;
+    
+}
+
+.input input {
+    position: center;
+    width: 700px;
+    height: 170px;
+    padding: 0 46rem;
+    border-radius: 40px;
+    transition: 0.2s;
+    font-size: 50px;
+
+}
+
+
+.loginbtn {
+    background: var(--green-color);
+    cursor: pointer;
+    font-size: 50px;
+    color:#ffffff;
+    width: auto;
+   
+}
+
+.loginbtn:focus,
+.loginbtn:hover {
+    background: #fff;
+    cursor: pointer;
+    color: var(--green-color);
+    text-transform: uppercase;
+    border: 5px solid var(--green-color);
+    transition: ease-in-out 0.2s;
+    position: center;
+}
+
+.input input:focus {
+    position: center;
+    width: 700px;
+    height: 170px;
+    padding: 0 46rem;
+    border-radius: 40px;
+    transition: 0.2s;
+    font-size: 60px;
+}
