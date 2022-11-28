@@ -16,13 +16,15 @@ import Recover_password from "pages/recover _password";
 import Report from "pages/report";
 import Request_services from "pages/request_services";
 import Register from "pages/news_register";
+import CadastroNoticia from "pages/cadastroNoticia/CadastroNoticia";
 
 function AppRoutes() {
   return (
     <BrowserRouter>
       {/* <ScrollToTop /> */}
       {/* <Menu /> */}
-      <Register/>
+      {/* <Register/> */}
+      <CadastroNoticia/>
 
       {/* <Routes>
         <Route path="/" element={<PaginaPadrao />}>
