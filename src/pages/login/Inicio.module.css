@@ -52,11 +52,11 @@
 .cardPrincipal1 {
   width: 100%;
   height: 100%;
-  background-color: #f87527;
+  background-color: #f1a014;
   padding: 0 !important;
   margin: 0 !important;
   align-items: center !important;
-  border: #f87527;
+  border: #f1a014;
   border-radius: 6% 0 0 0;
 }
 
@@ -82,7 +82,7 @@
 }
 
 .btnColor {
-  background-color: #ff6b00;
+  background-color: #f1a014;
   border: none;
   color: white;
   padding: 10px 20px;

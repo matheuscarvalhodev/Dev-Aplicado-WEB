@@ -24,7 +24,7 @@ export default function Report() {
     }
 
     return (
-        <div>
+        <div className={styles.principal}>
             {/* jgjhgj */}
             <header>
                 {/* Barras de Navegação */}

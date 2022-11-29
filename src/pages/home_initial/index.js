@@ -1,10 +1,8 @@
-import styles from "./Inicio.module.css";
 import SideNavBar from "componentes/SiderBar";
 import CarouselComponent from "componentes/Carousel/Carousel_Component";
 import {
   Card,
   CardBody,
-  CardText,
   CardLink,
   CardTitle,
   ListGroup,
@@ -17,7 +15,7 @@ export default function Home_initial() {
     <>
       <SideNavBar />
       <div style={{ marginTop: "100px" }}>
-      <Container >
+      <Container className="ml-5">
         <div className="row">
           <div className="col col-lg-3">
             <h3 className="mb-5 text-center text-decoration-underline">Ultimas Noticias</h3>

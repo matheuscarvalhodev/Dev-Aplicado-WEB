@@ -88,7 +88,7 @@ export default function Registration() {
                     </div>
                     <div>
                         <p className="dont-accont text-center">
-                            Already registered <a href="/sign-in">sign in?</a>
+                            Já possui registro? <a href="/login">Faça login</a>
                         </p>
                     </div>
                 </form>

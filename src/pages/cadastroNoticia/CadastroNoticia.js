@@ -34,7 +34,7 @@ function CadastroNoticia() {
         const corpo = data.corpoDaNoticia;
         console.log(titulo)
 
-        if ((titulo == '' || titulo == null) || (corpo == '' || corpo == null)) {
+        if ((titulo === '' || titulo == null) || (corpo === '' || corpo == null)) {
             alert("Nenhum campo pode ficar em branco!")
         }
         else {

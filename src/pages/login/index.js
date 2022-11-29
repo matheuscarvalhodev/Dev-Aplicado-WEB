@@ -63,7 +63,7 @@ export default function Login() {
                         <div>
                             <div className="mb-3">
                                 <label className={styles.rememberPassword} htmlFor="customCheck1">
-                                    <a href="/sign-in">Esqueceu a senha?</a>
+                                    <a href="/">Esqueceu a senha?</a>
                                 </label>
 
                             </div>

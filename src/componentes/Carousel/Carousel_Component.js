@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import styles from './Carousel.css'
 import {
   Carousel,
   CarouselItem,
@@ -55,8 +56,9 @@ function CarouselComponent(args) {
         onExiting={() => setAnimating(true)}
         onExited={() => setAnimating(false)}
         key={item.src}
+        className={styles.img}
       >
-        <img src={item.src} alt={item.altText} className="img-fluid" />
+        <img src={item.src} alt={item.altText} />
         <CarouselCaption
           captionText={item.caption}
           captionHeader={item.caption}

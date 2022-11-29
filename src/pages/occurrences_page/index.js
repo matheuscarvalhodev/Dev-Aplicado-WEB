@@ -72,19 +72,19 @@ export default function Ocurrences() {
 
             <section class={styles.flexFooter}>
                 <div class={styles.containerQuadro}>
-                <img src="assets/imagens/quadrado-verde.svg" alt="verde"/>
+                <img src="assets/imagens/quadrado-verde.svg" alt="verde" className={styles.img}/>
                 <p>Ocorrência: Visualizada e Atendida</p>
                 </div>
                 <div class={styles.containerQuadro}>
-                <img src="assets/imagens/quadrado-amarelo.svg" alt="amarelo"/>
+                <img src="assets/imagens/quadrado-amarelo.svg" alt="amarelo" className={styles.img}/>
                 <p>Ocorrência: Visualizada e Não Atendida</p>
                 </div>
                 <div class={styles.containerQuadro}>
-                <img src="assets/imagens/quadrado-rosa.svg" alt="rosa"/>
+                <img src="assets/imagens/quadrado-rosa.svg" alt="rosa" className={styles.img}/>
                 <p>Ocorrência: Não Vizualizada</p>
                 </div>
                 <div class={styles.containerQuadro}>
-                <img src="assets/imagens/quadrado-vermelho.svg" alt="vermelho"/>
+                <img src="assets/imagens/quadrado-vermelho.svg" alt="vermelho" className={styles.img}/>
                 <p>Não é uma Ocorrência</p>
                 </div>
             </section>
