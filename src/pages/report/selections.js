@@ -1,11 +1,11 @@
-import { useState } from "react";
 import styles from "./Inicio.module.css";
+import Select from 'react-select'
 
 export function Selection(props) {
   function handleChange(e) {
     props.setFilters((prevValues) => ({
       ...prevValues,
-      [props.name]: e.target.value,
+      [props.name]: e.value,
     }));
   }
 
@@ -13,14 +13,7 @@ export function Selection(props) {
     <section class={styles.sect_item}>
       <label>
         {props.label}
-        <select title="Selecione" onChange={handleChange}>
-          <option selected>
-            Selecione
-          </option>
-          {props.select.map((item, index) => {
-            return <option value={item}>{item}</option>;
-          })}
-        </select>
+        <Select options={props.select} onChange={handleChange} placeholder={"Selecione"} />
       </label>
     </section>
   );
