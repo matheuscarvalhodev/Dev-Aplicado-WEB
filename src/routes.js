@@ -16,6 +16,7 @@ import CadastroNoticia from "pages/cadastroNoticia/CadastroNoticia";
 function AppRoutes() {
   return (
     <BrowserRouter>
+
       <Routes>
         <Route path="/" element={<HomeInitial />}/>
         <Route path="*" element={<NaoEncontrada />}/>
