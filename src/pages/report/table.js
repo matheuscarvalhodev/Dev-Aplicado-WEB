@@ -12,16 +12,16 @@ export function TableRelatorio(props) {
 			let lineN = false;
 
 			Object.keys(filter).forEach((key) => {
-				if (filter[key] == "")
+				if (filter[key] === "")
 					i++;
 			})
-			if (i == 4)
+			if (i === 4)
 				table.push(line);
 			Object.keys(filter).forEach((key) => {
 				if (filter[key]) {
 					const hasSome = line.some(
 						(item) =>
-							String(item).toLowerCase().trim() ==
+							String(item).toLowerCase().trim() ===
 							filter[key].toLowerCase().trim()
 					);
 
@@ -29,7 +29,7 @@ export function TableRelatorio(props) {
 						if (!existOc(temp, line) && !lineN) {
 							temp.push(line);
 						}
-					} else if (filter[key] != "") {
+					} else if (filter[key] !== "") {
 						temp.splice(0, 1);
 						lineN = true;
 					}

@@ -24,7 +24,6 @@ import SignalCellularAltIcon from '@mui/icons-material/SignalCellularAlt';
 import NewspaperIcon from '@mui/icons-material/Newspaper';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import { Margin } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 
 const drawerWidth = 240;

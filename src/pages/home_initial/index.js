@@ -1,5 +1,6 @@
 import SideNavBar from "componentes/SiderBar";
 import CarouselComponent from "componentes/Carousel/Carousel_Component";
+import styles from './Inicio.module.css'
 import {
   Card,
   CardBody,
@@ -15,8 +16,8 @@ export default function Home_initial() {
     <>
       <SideNavBar />
       <div style={{ marginTop: "100px" }}>
-      <Container className="ml-5">
-        <div className="row">
+      <Container>
+        <div className={styles.principal}>
           <div className="col col-lg-3">
             <h3 className="mb-5 text-center text-decoration-underline">Ultimas Noticias</h3>
             <Card className="mb-5">
@@ -46,7 +47,8 @@ export default function Home_initial() {
               </CardBody>
             </Card>
           </div>
-          <div className="col-md-auto"><h3 className="mb-2">Atuações</h3>
+          <div>
+            <h3 className="mb-2">Atuações</h3>
             <CarouselComponent />
           </div>
         </div>

@@ -13,6 +13,22 @@ h1 {
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
   }
+  .botao{
+    background-color: #f1a014;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-weight: 700;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    margin-top: 27px;
+}
+
+.botao:hover{
+    color: #ffdf95;
+}
 
   .flex {
     display: flex;

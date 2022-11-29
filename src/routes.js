@@ -4,6 +4,7 @@ import HomeInitial from "pages/home_initial";
 import Login from "pages/login";
 import NewsRegister from "pages/news_register";
 import Ocurrences from "pages/occurrences_page";
+import DetalheOcorrencia from "pages/DetalheOcorrencia";
 import Report from "pages/report";
 import CadastroNoticia from "pages/cadastroNoticia/CadastroNoticia";
 
@@ -19,6 +20,7 @@ function AppRoutes() {
         <Route path="/ocurrences" element={<Ocurrences/>}/>
         <Route path="/report" element={<Report/>}/>
         <Route path="/new_register" element={<NewsRegister/>}/>
+        <Route path="/ocurrences/:id" component={DetalheOcorrencia} element={<DetalheOcorrencia/>}/>
       </Routes>
 
     </BrowserRouter>

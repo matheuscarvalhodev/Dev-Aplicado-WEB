@@ -2,6 +2,8 @@ import styles from './Inicio.module.css';
 import SideNavBar from "componentes/SiderBar";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import Button from "@mui/material/Button";
 
 export default function Ocurrences() {
 
@@ -60,13 +62,18 @@ export default function Ocurrences() {
                 </thead>
                 <tbody>
                 {ocorrencia.map(ocorrencias => ( 
-                         <tr>
-                            <th scope='row'key={ocorrencias.id}>{ocorrencias.id}</th>
-                            <td>{ocorrencias.nome_autor_crime}</td>
-                            <td>{ocorrencias.data_ocorrido}</td>
-                            <td>{ocorrencias.local_ocorrido}</td>
-                        </tr>
-                    ))}
+                        <tr>
+                        <th scope='row'key={ocorrencias.id}>{ocorrencias.id}</th>
+                        <td>{ocorrencias.nome_autor_crime}</td>
+                        <td>{ocorrencias.data_ocorrido}</td>
+                        <td>{ocorrencias.local_ocorrido}</td>
+                        <td><Button component={Link} to={`/ocurrences/${ocorrencias.id}`} style={{
+                    borderRadius: 50,
+                    backgroundColor: "#f1a014",
+                    fontSize: "18px"
+                }}>&#10132;</Button></td>
+                    </tr>
+                ))}
                 </tbody>
             </table>
 
