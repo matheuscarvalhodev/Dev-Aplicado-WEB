@@ -25,53 +25,62 @@ function CadastroNoticia() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (image ===null || image === '') {
-            // const formData = new FormData(e.target);
-            // const data = Object.fromEntries(formData);
-            // console.log("HandleSubmit ", data);
-            // const titulo = data.tituloNoticia;
-            // const corpo = data.corpoDaNoticia;
-            // const dataPublicacao = new Date();
+        const formData = new FormData(e.target);
+        const data = Object.fromEntries(formData);
+        
 
-            // axios.post("http://localhost:5000/noticias", { titulo, corpo, dataPublicacao })
+        const titulo = data.tituloNoticia;
+        const corpo = data.corpoDaNoticia;
+        console.log(titulo)
 
-            alert("Você precisa adicionar um arquivo de imagem!");
-            // window.location.reload();
-            return;
+        if ((titulo == '' || titulo == null) || (corpo == '' || corpo == null)) {
+            alert("Nenhum campo pode ficar em branco!")
         }
         else {
-            const storageRef = ref(storage, `images/${image.name}`)
-            const uploadTask = uploadBytesResumable(storageRef, image)
+            if ((image === null || image === '')|| image === undefined) {
+                // const formData = new FormData(e.target);
+                // const data = Object.fromEntries(formData);
+                // console.log("HandleSubmit ", data);
+                // const titulo = data.tituloNoticia;
+                // const corpo = data.corpoDaNoticia;
+                // const dataPublicacao = new Date();
 
-            uploadTask.on(
-                "state_changed",
-                snapshot => {
-                    const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100
-                    setProgress(progress);
-                },
-                error => {
-                    alert(error)
-                },
-                () => {
-                    getDownloadURL(uploadTask.snapshot.ref).then(url => {
-                        setImage(url)
-                        const formData = new FormData(e.target);
-                        const data = Object.fromEntries(formData);
-                        console.log("HandleSubmit ", data);
+                // axios.post("http://localhost:5000/noticias", { titulo, corpo, dataPublicacao })
 
-                        const titulo = data.tituloNoticia;
-                        const corpo = data.corpoDaNoticia;
-                        const urlImagem = url;
-                        const dataPublicacao = new Date();
+                alert("Você precisa adicionar um arquivo de imagem!");
+                // window.location.reload();
+                return;
+            }
+            else {
+                const storageRef = ref(storage, `images/${image.name}`)
+                const uploadTask = uploadBytesResumable(storageRef, image)
 
-                        axios.post("http://localhost:5000/noticias", { titulo, corpo, urlImagem, dataPublicacao })
+                uploadTask.on(
+                    "state_changed",
+                    snapshot => {
+                        const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+                        setProgress(progress);
+                    },
+                    error => {
+                        alert(error)
+                    },
+                    () => {
+                        getDownloadURL(uploadTask.snapshot.ref).then(url => {
+                            setImage(url)
 
-                        alert("Notícia enviada!");
-                        window.location.reload();
-                    })
-                }
-            )
+                            const urlImagem = url;
+                            const dataPublicacao = new Date();
+
+                            axios.post("http://localhost:5000/noticias", { titulo, corpo, urlImagem, dataPublicacao })
+
+                            alert("Notícia enviada!");
+                            window.location.reload();
+                        })
+                    }
+                )
+            }
         }
+
     };
 
     console.log(image)
