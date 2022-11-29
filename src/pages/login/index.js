@@ -1,6 +1,7 @@
-import Styles from './Inicio.module.css'
+import styles from './Inicio.module.css'
 import "bootstrap/dist/css/bootstrap.min.css"
 import { Col, Row, Input } from 'reactstrap'
+import { Link } from 'react-router-dom';
 
 
 export default function Login() {
@@ -16,13 +17,16 @@ export default function Login() {
     }
 
     return (
-        <Row>
-            <Col className={Styles.colCor}>
-                <img src='DFCIVIL.png' className={Styles.src} />
+        <Row className={styles.cardPrincipal}>
+            <Col className={styles.cardPrincipal1}>
+
+                <img src='DFCIVIL.png' className={styles.imagem} />
+
             </Col>
-            <Col>
-                <form className={Styles.cardBody} onSubmit={onSubmit}>
-                    <h3>LOGIN</h3>
+
+            <Col className={styles.cardCadastro}>
+                <h1 className="d-flex justify-content-center p-3 m-0 text-secondary font-weight-bold">LOGIN</h1>
+                <form className={styles.cardBody} onSubmit={onSubmit}>
                     <div className="mb-3">
                         <Input
                             name='email'
@@ -37,35 +41,48 @@ export default function Login() {
                             name='password'
                             type="password"
                             className="form-control"
-                            placeholder="Password"
+                            placeholder="Senha"
                             required
                         />
 
                     </div>
-                    <div className="mb-3">
-                        <div className="custom-control custom-checkbox">
-                            <input
-                                type="checkbox"
-                                className="custom-control-input"
-                            />
-                            <label className={Styles.customControlLabel} htmlFor="customCheck1">
-                                Remember me
-                            </label>
+                    <div className={styles.link}>
+                        <div>
+                            <div className="mb-3">
+                                <div className="custom-control custom-checkbox">
+                                    <input
+                                        type="checkbox"
+                                        className="custom-control-input"
+                                    />
+                                    <label className={styles.customControlLabel} htmlFor="customCheck1">
+                                        Lembrar senha?
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div className="mb-3">
+                                <label className={styles.rememberPassword} htmlFor="customCheck1">
+                                    <a href="/sign-in">Esqueceu a senha?</a>
+                                </label>
+
+                            </div>
                         </div>
                     </div>
                     <div className="d-grid">
                         <button
                             type="submit"
-                            className={Styles.btnColor}>
-                            SIGN
+                            className={styles.btnColor}>
+                            Entrar
                         </button>
                     </div>
-                    <p className={Styles.dontAccont}>
-                        Dont have an accont?
-                    </p>
+                    <div >
+                        <p className={styles.dontAccont}>
+                            <a href="/sign-in">Não tem uma conta?</a>
+                        </p>
+                    </div>
                 </form>
             </Col>
         </Row>
-
     )
 }
