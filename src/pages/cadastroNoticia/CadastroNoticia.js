@@ -84,12 +84,12 @@ function CadastroNoticia() {
 
     };
 
-    console.log(image)
+    
 
     return (
-        <div>
+        <div className={styles.principal}>
             <SideNavBar />
-            <div className={styles.principal}>
+            <div>
                 <form onSubmit={handleSubmit} className="container">
                     {/* Título da página */}
                     <h2 className={styles.tituloCadastroNoticia}>Cadastramento de notícias</h2>
