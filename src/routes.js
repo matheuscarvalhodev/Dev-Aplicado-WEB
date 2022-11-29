@@ -20,6 +20,7 @@ import CadastroNoticia from "pages/cadastroNoticia/CadastroNoticia";
 function AppRoutes() {
   return (
     <BrowserRouter>
+<<<<<<< HEAD
       <Routes>
         <Route path="/" element={<HomeInitial />}/>
         <Route path="*" element={<NaoEncontrada />}/>
@@ -28,6 +29,11 @@ function AppRoutes() {
         <Route path="/ocurrences" element={<Ocurrences/>}/>
         <Route path="/report" element={<Report/>}/>
       </Routes>
+=======
+      {/* <ScrollToTop /> */}
+      {/* <Menu /> */}
+      <Login/>
+>>>>>>> 5b682ab (feat: nova feature tela de login)
 
 
     </BrowserRouter>
