@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Selection } from './selections.js';
 import { TableRelatorio } from "./table.js";
 import { Button, CardHeader, CardBody, CardFooter } from 'reactstrap';
-import SideNavBar from 'componentes/SideBar';
+import SideNavBar from "componentes/SiderBar";
 import { Card, Col, Row } from 'react-bootstrap';
 import { useState } from "react";
 

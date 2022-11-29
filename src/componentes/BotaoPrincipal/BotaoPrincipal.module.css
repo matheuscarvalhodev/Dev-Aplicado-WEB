@@ -4,9 +4,9 @@
     padding: 0.75rem 1.5rem;
     font-size: 1.125rem;
     line-height: 1.125rem;
-    background-color: var(--azul-medio);
-    color: var(--branco);
-    border: 3px solid var(--azul-medio);
+    background-color: white;
+    color: #f1a014;
+    border: 3px solid black;
     cursor: pointer;
     transition: 0.2s;
 }
@@ -18,5 +18,7 @@
 }
  
 .botaoPrincipal:hover {
+    background-color: #f1c373;
+    color: black;
     border: 3px solid var(--azul-escuro);
 }

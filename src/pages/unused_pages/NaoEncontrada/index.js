@@ -1,5 +1,4 @@
 import styles from './NaoEncontrada.module.css';
-import erro404 from 'assets/erro_404.png'
 import BotaoPrincipal from 'componentes/BotaoPrincipal';
 import { useNavigate } from 'react-router-dom';
 
@@ -31,12 +30,6 @@ export default function NaoEncontrada() {
                         Voltar
                     </BotaoPrincipal>
                 </div>
-
-                <img
-                    className={styles.imagemCachorro}
-                    src={erro404}
-                    alt="Cachorro de óculos e vestido como humano"
-                />
             </div>
             <div className={styles.espacoEmBranco}></div>
         </>
