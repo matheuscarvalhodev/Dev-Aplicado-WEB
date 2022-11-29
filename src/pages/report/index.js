@@ -19,23 +19,34 @@ export default function Report() {
     const [filters, setFilters] = useState(filterOrigin);
     const [opZona, setOpZona] = useState(ZonaSelect);
 
+    function refreshPage() {
+        window.location.reload(false);
+    }
+
     return (
         <div>
             <header>
+                {/* Barras de Navegação */}
                 <SideNavBar></SideNavBar>
             </header>
 
             <main className='container' style={{ marginTop: "100px" }}>
 
-                <div className="top-relatorio">
-                    <h2 className='text-center mb-5'>RELATORIO</h2>
+                {/* Titulo da Pagina */}
+                <div className="top-relatorio" >
+                    <p className='text-center mb-5' style={{ fontSize: 24 }}>
+                        <strong >
+                            RELATORIO
+                        </strong>
+                    </p>
+
                 </div>
 
                 <Card>
                     <CardHeader>
-
                         <Row>
                             <Col lg='4'>
+                                {/* Componente de mostrar data e hora */}
                                 <div >
                                     <p>Data: {date.toLocaleDateString()}</p>
                                     <p>Hora: {date.toLocaleTimeString().substr(0, 5)}</p>
@@ -44,6 +55,7 @@ export default function Report() {
 
                             <Col lg='4'>
                                 <div >
+                                    {/* Filtros de Seleção 1 */}
                                     <Selection
                                         class={styles.sect}
                                         label="Tipo de Ocorrência: "
@@ -67,7 +79,7 @@ export default function Report() {
                             </Col>
 
                             <Col lg='4'>
-
+                                {/* Filtros de API 2 */}
                                 <Selection
                                     class={styles.sect}
                                     label="Bairro: "
@@ -93,7 +105,7 @@ export default function Report() {
 
                     <CardBody>
                         <div className='table-relatorio'>
-
+                            {/* Tabela com dados */}
                             <TableRelatorio table={table} filters={filters} />
 
                         </div>
@@ -101,29 +113,24 @@ export default function Report() {
                     </CardBody>
 
                     <CardFooter>
+
+                        {/* Botões Fim da Pagina */}
                         <div className='d-flex justify-content-around'>
                             <Row>
                                 <Col lg='4'>
-                                    <Button color="link">
+                                    {/* onClick={table} criar PDF com isso*/}
+                                    <Button color="link"> 
                                         Emitir Relatório Completo
                                     </Button>
                                 </Col>
                                 <Col lg='5'>
-                                    <Button color="link" onClick={() => {
-                                        setFilters(filterOrigin)
-                                        setOpZona(ZonaSelect);
-                                    }} >Vizualizar Relatório Completo</Button>
+                                    <Button color="link" onClick={refreshPage}>Vizualizar Relatório Completo</Button>
                                 </Col>
                             </Row>
                         </div>
-
                     </CardFooter>
-
                 </Card>
-
             </main >
-
-
         </div >
     )
 }

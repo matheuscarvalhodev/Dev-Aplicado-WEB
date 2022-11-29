@@ -21,7 +21,7 @@ export function TableRelatorio(props) {
 				if (filter[key]) {
 					const hasSome = line.some(
 						(item) =>
-							String(item).toLowerCase().trim() ===
+							String(item).toLowerCase().trim() ==
 							filter[key].toLowerCase().trim()
 					);
 
@@ -53,7 +53,7 @@ export function TableRelatorio(props) {
 	}
 
 	return (
-		<Table striped>
+		<Table striped responsive>
 			<thead>
 				<tr>
 					{props.table.titles.map((item, index) => {
