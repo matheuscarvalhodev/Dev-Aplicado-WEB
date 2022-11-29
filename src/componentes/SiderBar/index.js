@@ -25,6 +25,7 @@ import NewspaperIcon from '@mui/icons-material/Newspaper';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { Margin } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 
 const drawerWidth = 240;
 
@@ -110,9 +111,12 @@ export default function SideNavBar() {
     <AssignmentIcon/>
   ]
   const routes = [
-    "../../home_initial",
-    "../../pages/login",
-    "../../pages/report"
+    "/ocurrences",
+    "/login",
+    "/report",
+    "/news_register",
+    "/",
+    "/report",
   ]
 
   const handleDrawerClose = () => {
@@ -123,7 +127,7 @@ export default function SideNavBar() {
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <AppBar position="fixed" open={open}>
-        <Toolbar style={{ backgroundColor: "#FF6B00" }}>
+        <Toolbar style={{ backgroundColor: "#f1a014" }}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -139,7 +143,7 @@ export default function SideNavBar() {
           <Typography variant="h6" noWrap component="div"  sx={{ flexGrow: 1 }}>
             Defesa Civil
           </Typography>
-          <Button  href="../../pages/login" color="inherit"><AccountCircleIcon sx={{marginRight: 2}}/>Login</Button>
+          <Button component={Link} to="/login" color="inherit"><AccountCircleIcon sx={{marginRight: 2}}/>Login</Button>
         </Toolbar>
       </AppBar>
       <Drawer variant="permanent" open={open}>
@@ -161,8 +165,8 @@ export default function SideNavBar() {
             "Ocorrências",
             "Mapa de Ocorrências",
             "Estatísticas",
-            "Alerta de Desastre",
             "Cadastro de Noticias",
+            "Alerta de Desastre",
             "Relatorios",
           ].map((text, index) => (
             <ListItem key={text} disablePadding sx={{ display: "block" }}>
@@ -185,6 +189,7 @@ export default function SideNavBar() {
                   
                 </ListItemIcon>
                 <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
+                <Link to={`${routes[index]}`}/>
               </ListItemButton>
             </ListItem>
           ))}

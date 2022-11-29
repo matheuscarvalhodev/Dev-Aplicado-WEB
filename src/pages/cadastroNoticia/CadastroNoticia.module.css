@@ -1,3 +1,6 @@
+.principal{
+    margin-top: 100px;
+}
 .coluna1 {
     width: 100%;
    /* background: #3333; */
@@ -12,6 +15,7 @@
     padding: 10px;
     font-size: 25px;
     color: #2F7FF9;
+    text-align: center;
 }
 
 .tituloNoticia {
