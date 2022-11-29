@@ -10,9 +10,9 @@ import SobreMim from './pages/unused_pages/SobreMim';
 import Registration from "pages/registration";
 import HomeInitial from "pages/home_initial";
 import Login from "pages/login";
-import NewsRegister from "pages/news_register";
-import Ocurrences from "pages/occurrences_page";
-import Recover_password from "pages/recover _password";
+import News_register from "pages/news_register";
+import Ocurrences_page from "pages/occurrences_page";
+import Recover_password from "pages/recover_password";
 import Report from "pages/report";
 import Request_services from "pages/request_services";
 import CadastroNoticia from "pages/cadastroNoticia/CadastroNoticia";
@@ -20,16 +20,20 @@ import CadastroNoticia from "pages/cadastroNoticia/CadastroNoticia";
 function AppRoutes() {
   return (
     <BrowserRouter>
+      {/* <ScrollToTop /> */}
+      {/* <Menu /> */}
+      <Recover_password/>
 
-      <Routes>
-        <Route path="/" element={<HomeInitial />}/>
-        <Route path="*" element={<NaoEncontrada />}/>
-        <Route path="/login" element={<Login/>}/>
-        <Route path="/news_register" element={<CadastroNoticia/>}/>
-        <Route path="/ocurrences" element={<Ocurrences/>}/>
-        <Route path="/report" element={<Report/>}/>
-      </Routes>
-
+      {/* <Routes>
+        <Route path="/" element={<PaginaPadrao />}>
+          <Route index element={<Inicio />} />
+          
+          <Route path="sobremim" element={<SobreMim />} />
+        </Route>
+        
+        <Route path="posts/:id/*" element={<Post />} />
+        <Route path="*" element={<NaoEncontrada />} />
+      </Routes> */}
 
     </BrowserRouter>
   );
