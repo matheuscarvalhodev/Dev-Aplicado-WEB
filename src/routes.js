@@ -4,10 +4,6 @@ import ScrollToTop from "componentes/ScrollToTop";
 import NaoEncontrada from "pages/unused_pages/NaoEncontrada";
 import Post from "pages/unused_pages/Post";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Menu from "./componentes/Menu";
-import Inicio from './pages/unused_pages/Inicio';
-import SobreMim from './pages/unused_pages/SobreMim';
-import Registration from "pages/registration";
 import HomeInitial from "pages/home_initial";
 import Login from "pages/login";
 import NewsRegister from "pages/news_register";
@@ -27,8 +23,8 @@ function AppRoutes() {
         <Route path="/news_register" element={<CadastroNoticia/>}/>
         <Route path="/ocurrences" element={<Ocurrences/>}/>
         <Route path="/report" element={<Report/>}/>
+        <Route path="/new_register" element={<NewsRegister/>}/>
       </Routes>
-
 
     </BrowserRouter>
   );
