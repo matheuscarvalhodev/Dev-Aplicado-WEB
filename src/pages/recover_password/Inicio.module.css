@@ -26,8 +26,8 @@ body {
 
 }
 .container {
-    width: 40%;
-    height: 60%;
+    width: 50%;
+    height: 50%;
     box-shadow: 0 12px 12px rgb(183, 176, 176, 183);
     z-index: 10;
     overflow: hidden;
