@@ -7,81 +7,17 @@ import { Button, CardHeader, CardBody, CardFooter } from 'reactstrap';
 import SideNavBar from "componentes/SiderBar";
 import { Card, Col, Row } from 'react-bootstrap';
 import { useState } from "react";
+import { ZonaSelect, tableOrigin, filterOrigin, typeSelect, bairroSelect, PeriodoSelect } from "./data";
 
-
-
-const tableOrigin = {
-    titles: [
-        "Ocorrência",
-        "Local",
-        "Período",
-        "Atendidas",
-        "Não Atendidas",
-        "Total",
-        "Zona",
-    ],
-    oc: {
-        oc1: ["Incêndio", "Bairro Santa Luzia", "MARÇO", 10, 0, 10, "Urbana"],
-        oc2: [
-            "Incêndio",
-            "Bairro Jesus Misericordioso",
-            "MARÇO",
-            15,
-            1,
-            16,
-            "Urbana",
-        ],
-        oc3: [
-            "Deslizamento de Terra",
-            "Bairro Jesus Misericordioso",
-            "ABRIL",
-            3,
-            1,
-            4,
-            "Urbana",
-        ],
-        oc4: [
-            "Acidente Químico",
-            " Bairro Novo Horizonte",
-            "MARÇO",
-            2,
-            0,
-            2,
-            "Urbana",
-        ],
-        oc5: ["Alagamento", "Bairro Santa Luzia", "FEVEREIRO", 5, 0, 5, "Urbana"],
-        oc6: ["Outros", "Bairro Cidade Nova", "JANEIRO", 20, 2, 22, "Rural"],
-    },
-};
 
 export default function Report() {
 
     const date = new Date();
-    const ZonaSelect = ["Urbana", "Rural"];
 
     const [table, setTable] = useState(tableOrigin);
     const [select, setSelect] = useState();
-    const [filters, setFilters] = useState({
-        zona: "",
-        bairro: "",
-        periodo: "",
-        tipoOcorrencia: "",
-    });
-
-    const PeriodoSelect = [
-        "JANEIRO",
-        "FEVEREIRO",
-        "MARÇO",
-        "ABRIL",
-        "MAIO",
-        "JUNHO",
-        "JULHO",
-        "AGOSTO",
-        "SETEMBRO",
-        "OUTROBRO",
-        "NOVEMBRO",
-        "DEZEMBRO",
-    ];
+    const [filters, setFilters] = useState(filterOrigin);
+    const [opZona, setOpZona] = useState(ZonaSelect);
 
     return (
         <div>
@@ -112,15 +48,18 @@ export default function Report() {
                                         class={styles.sect}
                                         label="Tipo de Ocorrência: "
                                         name="tipoOcorrencia"
-                                        select={[]}
-                                        //select={ZonaSelect}
+                                        select={typeSelect}
+                                        setSelect={setSelect}
+                                        table={select}
                                         setFilters={setFilters}
                                     />
                                     <Selection
                                         class={styles.sect}
-                                        label="Bairro: "
-                                        name="bairro"
-                                        select={[]}
+                                        label="Periodo: "
+                                        name="periodo"
+                                        select={PeriodoSelect}
+                                        setSelect={setSelect}
+                                        table={select}
                                         setFilters={setFilters}
                                     />
 
@@ -131,9 +70,9 @@ export default function Report() {
 
                                 <Selection
                                     class={styles.sect}
-                                    label="Periodo: "
-                                    name="periodo"
-                                    select={PeriodoSelect}
+                                    label="Bairro: "
+                                    name="bairro"
+                                    select={bairroSelect}
                                     setSelect={setSelect}
                                     table={select}
                                     setFilters={setFilters}
@@ -142,7 +81,7 @@ export default function Report() {
                                     class={styles.sect}
                                     label="Zona: "
                                     name="zona"
-                                    select={ZonaSelect}
+                                    select={opZona}
                                     setSelect={setSelect}
                                     table={select}
                                     setFilters={setFilters}
@@ -170,9 +109,10 @@ export default function Report() {
                                     </Button>
                                 </Col>
                                 <Col lg='5'>
-                                    <Button color="link">
-                                        Vizualizar Relatório Completo
-                                    </Button>
+                                    <Button color="link" onClick={() => {
+                                        setFilters(filterOrigin)
+                                        setOpZona(ZonaSelect);
+                                    }} >Vizualizar Relatório Completo</Button>
                                 </Col>
                             </Row>
                         </div>
