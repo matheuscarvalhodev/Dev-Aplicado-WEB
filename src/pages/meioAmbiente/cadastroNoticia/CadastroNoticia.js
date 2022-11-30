@@ -3,7 +3,7 @@ import { useState, useRef } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle'
 import styles from './CadastroNoticia.module.css'
-import SideNavBar from "componentes/SiderBar";
+import SideNavBar from 'componentes/SiderBar';
 
 //Firebase
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage'
