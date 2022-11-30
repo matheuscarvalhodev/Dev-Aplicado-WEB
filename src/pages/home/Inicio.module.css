@@ -54,8 +54,8 @@
 }
 
 .card {
-    width: 70%;
-    height: 80%;
+    width: 60%;
+    height: 30%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -63,6 +63,7 @@
     border-radius: 5% 0 5% 0 !important;
     background-color: rgb(245, 246, 247) !important;
 }
+
 
 .semma{
     background-color: green;
@@ -81,6 +82,7 @@
 .buttonSemma{
     text-decoration: black;
 }
+
 
 
 .buttonMeioAmbiente{
