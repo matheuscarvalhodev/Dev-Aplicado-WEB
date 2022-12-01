@@ -1,5 +1,9 @@
 .principal{
     margin-top: 100px;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    background:#ffff;
 }
 .coluna1 {
     width: 100%;
@@ -16,6 +20,7 @@
     font-size: 25px;
     color: #2F7FF9;
     text-align: center;
+    width: 100%;
 }
 
 .tituloNoticia {
@@ -41,13 +46,23 @@
 }
 
 @media screen and (max-width: 575px) {
+    .principal{
+        margin-top: 70px;
+        width: 80%;
+        margin-left: 20%;
+        background:#ffff;
+    }
+
     .tituloCadastroNoticia {
+        width: 100%;
         padding: 5px;
         font-size: 20px;
         color: #2F7FF9;
+        
     }
     .corpo{
-        padding-bottom: 10px;
+        padding-bottom: 5px;
+        width: 100%;
     }
     .tituloNoticia {
         font-size: 15px;
